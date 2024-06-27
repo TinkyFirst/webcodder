@@ -23,4 +23,13 @@ class UserController {
         $this->model->addUser($email, $name, $address, $phone, $comments, $departmentId);
         header('Location: /users');
     }
+    public function viewUser($id) {
+        $user = $this->model->getUserById($id);
+        include __DIR__ . '/../../views/viewuser.php';
+    }
+    public function deleteUser($id) {
+        $this->model->deleteUser($id);
+        header('Location: /users');
+    }
+
 }

@@ -26,4 +26,11 @@ class UserModel {
         $result = $this->db->query($query);
         return $result->fetchAll(\PDO::FETCH_ASSOC);
     }
+    public function getUserById($id) {
+        $query = "SELECT * FROM users WHERE id = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute([$id]);
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
+    }
+
 }
