@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/path/to/bootstrap.css" rel="stylesheet">
+    <link href="" rel="stylesheet">
     <title>User List</title>
 </head>
 <body>
